@@ -1,0 +1,20 @@
+.flex {
+    display: flex;
+}
+
+.form1 label {
+    display: block;
+}
+
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+}
