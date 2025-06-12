@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> fffffffff fffffff fffff fff ff fff fffff, f ff f </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrapper forms">
         <h1>Форми</h1>
@@ -14,16 +16,48 @@
             <form class="form1 " action="" method="post">
                 <label for=""><input type="text" name="name" id="" placeholder="Введіть ім’я"></label>
                 <label for=""><input type="text" name="email" id="" placeholder="Email"></label>
-                <label for=""><select name="city">
-                    <option disabled selected>Ваше місто</option>
-                    <option value="Kyiv">Київ</option>
-                    <option value="Lviv">Львів</option>
-                    <option value="Khmelnytskyi">Хмельницький</option>
-                </select></label>
+                <label class="arrowlabel" for=""><select name="city">
+                        <option disabled selected>Ваше місто</option>
+                        <option value="Kyiv">Київ</option>
+                        <option value="Lviv">Львів</option>
+                        <option value="Khmelnytskyi">Хмельницький</option>
+                    </select></label>
                 <label for=""><textarea name="comment" placeholder="Коментар"></textarea></label>
                 <button type="submit">Зареєструватися</button>
             </form>
         </div>
+        <div>
+            <hr>
+            <form class="form2" action="" method="post">
+                <h2>02. елементи</h2>
+                <div class="flex">
+                    <div class="radiof2">
+                        <div><input type="radio" value="nova poshta" name="delivery" id="in1"><label for="in1" >Нова Пошта</label></div>
+                        <div><input type="radio" value="kurjer" name="delivery" id="in2"><label for="in2 " >Кур’єр</label></div>
+                        <div><input type="radio" value="samoviviz" disabled name="delivery" id="in3"><label for="in3">  Самовивіз</label></div>
+                    </div>
+                    <div class="checkboxf2">
+                        <div><input type="checkbox" value="read" name="condition" id="in4"><label for="in4" >Прочитав умови договору</label></div>
+                        <div><input type="checkbox" value="agreed" name="pdv" id="in5"><label for="in5"> Згідний з ПДВ 9%</label></div>
+                        <div><input type="checkbox" value="email" disabled name="getnews" id="in6"><label for="in6" >Отримувати новини на ел. пошту</label></div>
+                            
+                    </div>
+                    <div class="datef2">
+                        <div class="flex">
+                            <p>Статус</p>
+                            <label><input type="checkbox" value="news" name="offer1">Новинки</label>
+                            <label><input type="checkbox" value="promo" name="offer2">Акційні товари</label>
+                            <label><input type="checkbox" value="sales" name="offer3">Розпродаж</label>
+                        </div>
+                        <div class="flex">
+                            <p>Дата</p>
+                            <label><input type="date" name="date" value="2025-06-03"></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
