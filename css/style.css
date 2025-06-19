@@ -18,7 +18,7 @@
     display: inline-block;
 }
 
-.form2 input{
+.form2 input {
     margin-bottom: -2px;
 }
 
@@ -99,7 +99,7 @@ hr {
     margin: 50px 0;
 }
 
-.form2 input:disabled+label{
+.form2 input:disabled+label {
     color: #b3b3b3;
 }
 
@@ -277,4 +277,107 @@ button:hover {
     box-shadow: 0px 2px 2.5px rgba(8, 118, 52, 0.35);
     background-color: #07be51;
     cursor: pointer;
+}
+
+.form3 input[type="radio"] {
+    appearance: none;
+    margin-right: 15px;
+}
+
+.form3>* {
+    width: 50%;
+}
+
+.form3 input[type="radio"]:checked {
+    border-color: #3e6aff;
+}
+
+#man:before {
+    content: "";
+    display: inline-block;
+    background: url(../images/man.png);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+#woman:before {
+    content: "";
+    display: inline-block;
+    background: url(../images/woman.png);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#man:checked:before {
+    background: url(../images/manblue.png);
+}
+
+#woman:checked:before {
+    background: url(../images/womanblue.png);
+}
+
+.gender {
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.gender input:checked+label {
+    color: #3e6aff;
+}
+
+.gender .flex {
+    align-items: center;
+}
+
+.tasks.flex {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.tasks label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.tasks input {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.tasks input {
+    position: relative;
+    appearance: none;
+    width: 45px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: #cfcfd1;
+}
+
+.tasks input:before {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    background-color: #fff;
+
+}
+
+.tasks input:checked {
+    background-color: #3e6aff;
+}
+
+.tasks input:checked::before {
+    left: 22px;
 }
