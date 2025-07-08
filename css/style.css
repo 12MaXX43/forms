@@ -56,12 +56,14 @@ textarea {
     border-radius: 3px;
 }
 
-.form1 input:focus,
-.form1 select:focus,
-.form1 textarea:focus,
-.form1 input:hover,
-.form1 select:hover,
-.form1 textarea:hover {
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus,
+input[type="text"]:hover,
+input[type="password"]:hover,
+select:hover,
+textarea:hover {
     outline: none;
     border: #3e6aff solid 1px;
     box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
@@ -130,7 +132,7 @@ hr {
     margin: 10px 20px 0;
 }
 
-.form2 .radiof2 input[type="radio"] {
+.radiof2 input[type="radio"] {
     appearance: none;
     position: relative;
     width: 15px;
@@ -138,18 +140,18 @@ hr {
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid #ccc;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
-.form2 .radiof2 input[type="radio"]:disabled {
+.radiof2 input[type="radio"]:disabled {
     background-color: #f7f7f7;
 }
 
-.form2 .radiof2 input[type="radio"]:checked {
+.radiof2 input[type="radio"]:checked {
     border-color: #3e6aff;
 }
 
-.form2 .radiof2 input[type="radio"]:before {
+.radiof2 input[type="radio"]:before {
     content: "";
     position: absolute;
     top: 3px;
@@ -161,7 +163,7 @@ hr {
     background-color: #fff;
 }
 
-.form2 .radiof2 input[type="radio"]:checked:before {
+.radiof2 input[type="radio"]:checked:before {
     background-color: #3e6aff;
 }
 
@@ -240,7 +242,7 @@ textarea {
     resize: vertical;
 }
 
-input,
+input::placeholder,
 textarea::placeholder {
     font-size: 14px;
     color: #b3b3b3;
@@ -380,4 +382,100 @@ button:hover {
 
 .tasks input:checked::before {
     left: 22px;
+}
+
+.form4 thead th {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: start;
+}
+
+.form4 [type="text"],
+.form4 [type="password"] {
+    width: 340px;
+    padding: 11px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.form4 input {
+    margin-top: 15px;
+}
+
+.form4 tbody input::placeholder {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form4 label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.form4 .radiof2 label {
+    margin: 0 25px 15px 0;
+    display: inline-block;
+}
+
+.form4 .radiof2 {
+    margin-right: 10px;
+}
+
+.form4 td {
+    min-width: 160px;
+}
+
+.form4 input[type="file"] {
+    display: none;
+}
+
+.form4 input[type="file"]+label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 170px;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #3e6aff;
+}
+
+.form4 input[type="file"]+label:hover {
+    background-color: #2857f4;
+    box-shadow: 0px 2px 2.5px rgba(15, 40, 126, 0.35);
+    cursor: pointer;
+}
+
+.form4 textarea {
+    min-height: 130px;
+}
+
+.form4 input[type="submit"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 340px;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #12d661;
+    border: none;
+}
+
+.form4 input[type="submit"]:hover {
+    background-color: #0b9c45;
+    cursor: pointer;
 }
