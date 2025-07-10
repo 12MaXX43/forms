@@ -479,3 +479,15 @@ button:hover {
     background-color: #0b9c45;
     cursor: pointer;
 }
+
+.form5 input {
+    width: 100%;
+}
+
+.form5 {
+    max-width: 680px;
+}
+
+.form5 table {
+    width: 100%;
+}
