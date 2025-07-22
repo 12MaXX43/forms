@@ -40,20 +40,39 @@ h2 {
     margin-bottom: 25px;
 }
 
+h3 {
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto";
+    margin-bottom: 25px;
+}
+
 .wrapper {
     max-width: 990px;
     margin: 0 auto;
 }
 
-.form1 input,
+html .form1 input,
 select,
 button,
 textarea {
     width: 100%;
     padding: 11px 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     border: #ccc solid 1px;
     border-radius: 3px;
+}
+
+form [type="text"],
+form [type="tel"],
+form [type="email"],
+form [type="password"] {
+    width: 340px;
+    padding: 11px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
 }
 
 input[type="text"]:focus,
@@ -63,7 +82,11 @@ textarea:focus,
 input[type="text"]:hover,
 input[type="password"]:hover,
 select:hover,
-textarea:hover {
+textarea:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:focus,
+input[type="email"]:focus {
     outline: none;
     border: #3e6aff solid 1px;
     box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
@@ -167,7 +190,7 @@ hr {
     background-color: #3e6aff;
 }
 
-.form2 input[type="checkbox"] {
+form input[type="checkbox"] {
     appearance: none;
     position: relative;
     width: 15px;
@@ -178,21 +201,21 @@ hr {
     margin-right: 10px;
 }
 
-.form2 input[type="checkbox"]:hover {
+form input[type="checkbox"]:hover {
     outline: none;
 
 }
 
-.form2 input[type="checkbox"]:disabled {
+form input[type="checkbox"]:disabled {
     background-color: #f7f7f7;
 
 }
 
-.form2 input[type="checkbox"]:checked {
+form input[type="checkbox"]:checked {
     border-color: #3e6aff;
 }
 
-.form2 input[type="checkbox"]:before {
+form input[type="checkbox"]:before {
     content: "";
     position: absolute;
     top: 2px;
@@ -203,7 +226,7 @@ hr {
     border-radius: 3px;
 }
 
-.form2 input[type="checkbox"]:checked:before {
+form input[type="checkbox"]:checked:before {
     border-bottom: #244dd7 solid 2px;
     border-left: #244dd7 solid 2px;
     transform: rotate(-45deg);
@@ -392,15 +415,6 @@ button:hover {
     text-align: start;
 }
 
-.form4 [type="text"],
-.form4 [type="password"] {
-    width: 340px;
-    padding: 11px;
-    border-radius: 3px;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-}
-
 .form4 input {
     margin-top: 15px;
 }
@@ -480,8 +494,17 @@ button:hover {
     cursor: pointer;
 }
 
-.form5 input {
+.form5 table input {
     width: 100%;
+    margin-top: 5px;
+}
+
+.form5 td {
+    padding: 5px;
+}
+
+.form5 table {
+    margin: 0 -5px;
 }
 
 .form5 {
@@ -490,4 +513,65 @@ button:hover {
 
 .form5 table {
     width: 100%;
+}
+
+.form5 td {
+    width: 33%;
+}
+
+.form5 label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+    padding-bottom: 20px;
+}
+
+.form5 hr {
+    margin: 30px 10px 30px 0;
+    background-color: #e9e9e9;
+}
+
+.form5 .arrowlabel::before {
+    content: "";
+    border-top: 20px #ccc solid;
+    border-right: 1px #ccc solid;
+    display: inline-block;
+    position: absolute;
+    top: 31px;
+    right: 35px;
+    z-index: -1;
+    transition: transform .2s;
+}
+
+.form5 .arrowlabel::after {
+    top: 35px;
+}
+
+.form5 input[type="checkbox"] {
+    margin-top: 25px;
+}
+
+.form5 input[type="checkbox"]+label {
+    color: #1f222c;
+}
+
+.form5 .flex{
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.form5 .flex button{
+    width: 180px;
+}
+
+.form5 .flex button[type="reset"]{
+    border: #85868d solid 1px;
+    background-color: #fff;
+    color: #6e6f77;
+}
+
+.form5 .flex button[type="reset"]:hover{
+    background-color: #85868d;
+    color: #fff;
 }

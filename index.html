@@ -67,7 +67,7 @@
 
             <hr>
 
-            <form action="">
+            <form action="" method="post">
                 <h2>03. стилізовані чекбокси </h2>
                 <div class="form3 flex">
                     <div class="gender">
@@ -90,7 +90,7 @@
 
             <hr>
             
-            <form action="">
+            <form action="" method="post">
                 <h2>04. форма таблицею</h2>
                 <table class="form4">
                     <thead>
@@ -142,25 +142,20 @@
 
             <hr>    
 
-            <form class="form5" action="">
+            <form class="form5" action="" method="post">
                 <h2>05. форма таблицею</h2>
                 <h3>Оформлення заявки</h3>
                 <table>
-                    <!-- <thead>
-                        <tr>
-                            <th>Оформлення заявки</th>
-                        </tr>
-                    </thead> -->
                     <tbody>
                         <tr>
                             <td>
                                 <label for="">Прізвище та ім’я<input type="text" name="name" id="" value="Василь Вірастюк"></label>
                             </td>
                             <td>
-                                <label for="">Ел. пошта<input type="text" name="email" id=""></label>
+                                <label for="">Ел. пошта<input type="email" name="email" id=""></label>
                             </td>
                             <td>
-                                <label for="">Телефон<input type="text" name="tel" id=""></label>
+                                <label for="">Телефон<input type="tel" name="tel" id=""></label>
                             </td>
                         </tr>
                     </tbody>
@@ -168,15 +163,27 @@
                 <hr>
                 <table>
                     <tr>
-                        <td><label for=""><input type="text" name="" id=""></label></td>
-                        <td colspan="2"><label for=""><input type="text" name="" id=""></label></td>
+                        <td><label class="arrowlabel" for="">Країна
+                            <select name="countries" id="countries">
+                                <option value="Indonesia">Індонезія</option>
+                                <option value="Mars">Марс</option>
+                                <option value="Kyiv">Київ</option>
+                            </select>
+                        </label></td>
+                        <td colspan="2"><label for="">Адреса<input type="text" name="address" id=""></label></td>
                     </tr>
                     <tr>
-                        <td><label for=""><input type="text" name="" id=""></label></td>
-                        <td><label for=""><input type="text" name="" id=""></label></td>
-                        <td><label for=""><input type="text" name="" id=""></label></td>
+                        <td><label for="">Місто<input type="text" name="city" id=""></label></td>
+                        <td><label for="">Будинок<input type="text" name="building" id=""></label></td>
+                        <td><label for="">Поштовий індекс<input type="text" name="zipCode" id=""></label></td>
                     </tr>
                 </table>
+                <input type="checkbox" name="" id=""><label for="">Я погоджуюсь з правилами оплати та доставки товару</label>
+                <hr>
+                <div class="flex">
+                    <button type="reset">Повернутися назад</button>
+                    <button type="submit">Оформити покупку</button>
+                </div>
             </form>
         </div>
     </div>
