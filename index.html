@@ -84,12 +84,17 @@
                         <label><input type="checkbox" name="getnews" value="1">Отримувати новини</label>
                         <label><input type="checkbox" name="buysausage" value="1">Купити додому ковбаси</label>
                         <label><input type="checkbox" name="turnonlights" value="1">Включити світло</label>
+                        <label>Якесь число
+                            <input id="range" type="range" name="someNumber" value="30" min="0" max="100" step="1">
+                            <span id="rangeSpan"></span>
+                        </label>
                     </div>
+
                 </div>
             </form>
 
             <hr>
-            
+
             <form action="" method="post">
                 <h2>04. форма таблицею</h2>
                 <table class="form4">
@@ -106,7 +111,11 @@
                         </tr>
                         <tr>
                             <td><label for="password">Пароль:</label></td>
-                            <td><input type="password" placeholder="Введіть не менше 6 символів" name="password" id="password"></td>
+                            <td class="relative">
+                                <input type="password" placeholder="Введіть не менше 6 символів" name="password"
+                                    id="password">
+                                <button id="passwordToggle" type="button">🙈</button>
+                            </td>
                         </tr>
                         <tr>
                             <td><label for="cities">Місто:</label></td>
@@ -130,7 +139,8 @@
                         </tr>
                         <tr>
                             <td><label for="comment">Коментарій:</label></td>
-                            <td><textarea name="comment" placeholder="Введіть текст повідомлення" id="comment"></textarea></td>
+                            <td><textarea name="comment" placeholder="Введіть текст повідомлення"
+                                    id="comment"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -140,7 +150,7 @@
                 </table>
             </form>
 
-            <hr>    
+            <hr>
 
             <form class="form5" action="" method="post">
                 <h2>05. форма таблицею</h2>
@@ -149,7 +159,8 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label for="">Прізвище та ім’я<input type="text" name="name" id="" value="Василь Вірастюк"></label>
+                                <label for="">Прізвище та ім’я<input type="text" name="name" id=""
+                                        value="Василь Вірастюк"></label>
                             </td>
                             <td>
                                 <label for="">Ел. пошта<input type="email" name="email" id=""></label>
@@ -164,12 +175,12 @@
                 <table>
                     <tr>
                         <td><label class="arrowlabel" for="">Країна
-                            <select name="countries" id="countries">
-                                <option value="Indonesia">Індонезія</option>
-                                <option value="Mars">Марс</option>
-                                <option value="Kyiv">Київ</option>
-                            </select>
-                        </label></td>
+                                <select name="countries" id="countries">
+                                    <option value="Indonesia">Індонезія</option>
+                                    <option value="Mars">Марс</option>
+                                    <option value="Kyiv">Київ</option>
+                                </select>
+                            </label></td>
                         <td colspan="2"><label for="">Адреса<input type="text" name="address" id=""></label></td>
                     </tr>
                     <tr>
@@ -178,15 +189,58 @@
                         <td><label for="">Поштовий індекс<input type="text" name="zipCode" id=""></label></td>
                     </tr>
                 </table>
-                <input type="checkbox" name="" id=""><label for="">Я погоджуюсь з правилами оплати та доставки товару</label>
+                <input type="checkbox" name="" id=""><label for="">Я погоджуюсь з правилами оплати та доставки
+                    товару</label>
                 <hr>
                 <div class="flex">
                     <button type="reset">Повернутися назад</button>
                     <button type="submit">Оформити покупку</button>
                 </div>
             </form>
+            <button id="showForm" type="button">Показати</button>
+            <div id="popup" class="popup" style="display: none;">
+                <div class="popup_content">
+                    <span id="closeForm" class="closeForm">&times;</span>
+                    <p>Тут контент попапу!</p>
+                    <!-- 6-а форма -->
+                </div>
+            </div>
+
+
+            <form action="" method="post">
+                <div class="form6">
+                    <label for="">Логін<input type="text"></label>
+                    <label for="">Пароль<input type="text"></label>
+                    <a href="">Забули пароль?</a>
+                    <input type="checkbox" name="" id=""><label for="">Запам’ятати пароль</label>
+                    <button type="submit">Увійти</button>
+                </div>
+            </form>
         </div>
     </div>
+    <script>
+        // Password
+        passwordToggle.onclick = function () {
+            if (password.type == "password") {
+                password.type = "text"
+                passwordToggle.textContent = "👁‍🗨"
+            } else {
+                password.type = "password"
+                passwordToggle.textContent = "🙈"
+            }
+        }
+
+        // Range
+        rangeSpan.textContent = range.value
+        range.oninput = function () {
+            rangeSpan.textContent = range.value
+        }
+
+        // Popup
+        showForm.onclick = () => popup.style.display = "flex"
+        closeForm.onclick = () => popup.style.display = "none"
+    </script>
+
 </body>
 
 </html>
