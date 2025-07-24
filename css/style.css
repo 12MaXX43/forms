@@ -110,7 +110,7 @@ select {
     transform: rotate(-135deg);
     display: inline-block;
     position: absolute;
-    top: 24px;
+    top: 19gpx;
     right: 15px;
     z-index: -1;
     transition: transform .2s;
@@ -215,7 +215,7 @@ form input[type="checkbox"]:checked {
     border-color: #3e6aff;
 }
 
-form input[type="checkbox"]:before {
+input[type="checkbox"]:before {
     content: "";
     position: absolute;
     top: 2px;
@@ -223,7 +223,6 @@ form input[type="checkbox"]:before {
     display: inline-block;
     width: 7px;
     height: 4px;
-    border-radius: 3px;
 }
 
 form input[type="checkbox"]:checked:before {
@@ -377,7 +376,7 @@ button:hover {
     margin-right: 20px;
 }
 
-.tasks input {
+.form3 .tasks input {
     position: relative;
     appearance: none;
     width: 45px;
@@ -389,8 +388,8 @@ button:hover {
 .tasks input:before {
     content: " ";
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 1px;
+    left: 1px;
     display: inline-block;
     width: 21px;
     height: 21px;
@@ -404,7 +403,7 @@ button:hover {
 }
 
 .tasks input:checked::before {
-    left: 22px;
+    left: 20px;
 }
 
 .form4 thead th {
@@ -600,7 +599,7 @@ button:hover {
 }
 
 /* Range */
-.tasks [type="range"] {
+.form3 .tasks [type="range"] {
     appearance: auto;
     position: static;
     width: 100px;
