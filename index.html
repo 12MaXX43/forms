@@ -197,25 +197,21 @@
                     <button type="submit">Оформити покупку</button>
                 </div>
             </form>
-            <button id="showForm" type="button">Показати</button>
-            <div id="popup" class="popup" style="display: none;">
-                <div class="popup_content">
-                    <span id="closeForm" class="closeForm">&times;</span>
-                    <p>Тут контент попапу!</p>
-                    <!-- 6-а форма -->
-                </div>
+
+            <div class="fixed">
+                <span id="showForm" style="display: none;">+</span>
+                <form class="form6" id="form6" action="" method="post">
+                    <h2>06. фіксована форма</h2>
+                    <div class="card">
+                        <span id="closeForm" class="closeForm">&times;</span>
+                        <label>Логін<input type="text"></label>
+                        <label>Пароль<input type="text"></label>
+                        <a href="">Забули пароль?</a>
+                        <label><input type="checkbox" name="" id="">Запам’ятати пароль</label>
+                        <button type="submit">Увійти</button>
+                    </div>
+                </form>
             </div>
-
-
-            <form action="" method="post">
-                <div class="form6">
-                    <label for="">Логін<input type="text"></label>
-                    <label for="">Пароль<input type="text"></label>
-                    <a href="">Забули пароль?</a>
-                    <input type="checkbox" name="" id=""><label for="">Запам’ятати пароль</label>
-                    <button type="submit">Увійти</button>
-                </div>
-            </form>
         </div>
     </div>
     <script>
@@ -237,8 +233,28 @@
         }
 
         // Popup
-        showForm.onclick = () => popup.style.display = "flex"
-        closeForm.onclick = () => popup.style.display = "none"
+        showForm.onclick = function () {
+            form6.style.display = "block"
+            showForm.style.display = "none"
+        }
+        closeForm.onclick = function () {
+            form6.style.display = "none"
+            showForm.style.display = "block"
+        }
+
+        document.onkeydown = function (ev) {
+            if (ev.key == "Escape") {
+                form6.style.display = "none"
+                showForm.style.display = "block"
+            }
+        }
+
+        form6.onclick = function (ev) {
+            if (ev.target == form6) {
+                form6.style.display = "none"
+                showForm.style.display = "block"
+            }
+        }
     </script>
 
 </body>
